@@ -39,7 +39,7 @@ export default function Home({results}) {
     )
 }
 
-// server side rendering, loading이 없는 페이지에 쓴다, API KEY를 숨기기 좋다.
+// server side rendering, loading을 넣지 않은 페이지에 쓴다, API KEY를 숨기기 좋다.
 // getServerSideProps의 이름은 변경하지 않는다.
 // getServerSideProps안에 들어가는 코드는 client가 아니라 오직 server쪽에서만 작동한다.
 // getServerSideProps를 통해 props를 pasge에 보낼 수 있다.
