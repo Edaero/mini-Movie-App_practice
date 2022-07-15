@@ -1,23 +1,13 @@
 import { useEffect, useState } from "react"
 import Seo from "../components/Seo"
 
-export default function Home() {
-    const [movies, setMovies] = useState();
-    // useEffect를 통해 영화 API를 가져올 url을 fetch해서 json으로 가져온다.
-    useEffect(() => {
-        (async () => {
-            const {results} = await (
-                await fetch(`/api/movies`)).json();
-            setMovies(results);
-        })();
-    }, []);
+// getServerSideProps에서 오는 return값을 home()에서 props로 가져온다.
+export default function Home({results}) {
     return (
         <div className="container">
             <Seo title="Home" />
-            {/* movies가 없을 경우 Loading이 나오고, 있을 경우 영화가 나오도록 설계 */}
             {/* map을 돌릴 때는 항상 key를 설정해줘야한다. */}
-            {!movies && <h4>Loading...</h4>}
-            {movies?.map(movie => (
+            {results?.map(movie => (
                 <div className="movie" key={movie.id}>
                     <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
                     <h4>{movie.original_title}</h4>
@@ -47,4 +37,18 @@ export default function Home() {
             </style>
         </div>
     )
+}
+
+// server side rendering, loading이 없는 페이지에 쓴다, API KEY를 숨기기 좋다.
+// getServerSideProps의 이름은 변경하지 않는다.
+// getServerSideProps안에 들어가는 코드는 client가 아니라 오직 server쪽에서만 작동한다.
+// getServerSideProps를 통해 props를 pasge에 보낼 수 있다.
+export async function getServerSideProps() {
+    // url에 /api/movies 뿐만 아니라 전체 url을 작성해 준다.
+    const {results} = await (await fetch(`http://localhost:3000/api/movies`)).json();
+    return {
+        props: {
+            results,
+        },
+    };
 }
