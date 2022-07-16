@@ -16,9 +16,6 @@ export default function NavBar() {
                 <Link href="/about">
                     <a className={router.pathname === "/about" ? "active" : ""}>About</a>
                 </Link>
-                <Link href="/ddedde">
-                    <a className={router.pathname === "/ddedde" ? "active" : ""}>DDEDDE</a>
-                </Link>
             </div>
 
             {/* css를 적용하는 세 가지 방법 3 - styled JSX(NextJS 고유의 방식), 임포트가 필요없다.

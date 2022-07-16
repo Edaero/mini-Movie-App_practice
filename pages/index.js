@@ -16,7 +16,7 @@ export default function Home({results}) {
                 .container {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
-                    padding: 20px;
+                    padding: 20px;d
                     gap: 10px;
                 }
                 .movie {
