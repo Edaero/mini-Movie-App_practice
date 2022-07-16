@@ -26,7 +26,12 @@ const nextConfig = {
       {
         source: "/api/movies", // source의 주소를 fetch 주소에 옮겨준다.
         destination: `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`,
-      }
+      },
+      {
+        // 영화 detail 페이지 마스킹
+        source: "/api/movies/:id",
+        destination: `https://api.themoviedb.org/3/movie/:id?api_key=${API_KEY}`,
+      },
     ]
   }
 };
