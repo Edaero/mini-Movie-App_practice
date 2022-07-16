@@ -9,16 +9,7 @@ export default function Home({results}) {
     const onClick = (id, title) => {
         // router.push(url) - 해당 URL로 이동한다.
         // router.replace(url1, url2) - url1으로 이동하고, 주소만 url2로 변경한다.
-        router.push({
-            // url에 /movies/ id / id & title이 들어가게된다.
-            pathname: `/movies/${id}`,
-            // 영화에 대한 정보를 담고 있는 query
-            query: {
-                title,
-            },
-        }, // as 부분에는 원하는 url을 넣어 숨길 수 있다. (마스킹)
-        `/movies/${id}`
-        );
+        router.push(`/movies/${title}/${id}`);
     };
     return (
         <div className="container">
@@ -29,15 +20,7 @@ export default function Home({results}) {
                     <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
                     <h4>
                         {/* href에 as속성을 넣어준다. */}
-                        <Link href={
-                            {
-                                pathname: `/movies/${movie.id}`,
-                                query: {
-                                    title: movie.original_title
-                                },
-                            }}
-                            as={`/movies/${movie.id}`}
-                        >
+                        <Link href={`/movies/${movie.original_title}/${movie.id}`}>
                             <a>{movie.original_title}</a>
                         </Link>
                     </h4>
