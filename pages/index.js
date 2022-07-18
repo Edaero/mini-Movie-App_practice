@@ -58,7 +58,7 @@ export default function Home({results}) {
 // server side rendering, loading을 넣지 않은 페이지에 쓴다.
 // getServerSideProps의 이름은 변경하지 않는다.
 // getServerSideProps안에 들어가는 코드는 client가 아니라 오직 server쪽에서만 작동한다.
-// getServerSideProps를 통해 props를 pasge에 보낼 수 있다.
+// getServerSideProps를 통해 props를 page에 보낼 수 있다.
 export async function getServerSideProps() {
     // fetch, 데이터베이스 요청, API 불러오기, API key 사용하기 등에 쓰인다.
     // url에 /api/movies 뿐만 아니라 전체 url을 작성해 준다.

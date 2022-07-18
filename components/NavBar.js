@@ -1,4 +1,4 @@
-// 네비게시션 바 만들기
+// 네비게이션 바 만들기
 import Link from "next/link"; // Link는 NextJS에서 클라이언트 사이드 네비게이션을 제공해준다.
 import { useRouter } from "next/router";
 
@@ -17,7 +17,6 @@ export default function NavBar() {
                     <a className={router.pathname === "/about" ? "active" : ""}>About</a>
                 </Link>
             </div>
-
             {/* css를 적용하는 세 가지 방법 3 - styled JSX(NextJS 고유의 방식), 임포트가 필요없다.
                 모든 방식은 컴포넌트 내로 한정된다.
                 <styles jsx>{`css`}</styles> */}
