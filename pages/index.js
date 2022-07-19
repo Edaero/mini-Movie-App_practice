@@ -6,7 +6,7 @@ import Seo from "../components/Seo"
 export default function Home({results}) {
     // useRouter는 NextJS에서 함수형식으로 라우팅할 수 있게 해주는 라이브러리
     const router = useRouter();
-    const onClick = (id, title) => {
+    const onClick = (id, title, img) => {
         // router.push(url) - 해당 URL로 이동한다.
         // router.replace(url1, url2) - url1으로 이동하고, 주소만 url2로 변경한다.
         router.push(`/movies/${title}/${id}`);
@@ -16,7 +16,7 @@ export default function Home({results}) {
             <Seo title="Home" />
             {/* map을 돌릴 때는 항상 key를 설정해줘야한다. */}
             {results?.map(movie => (
-                <div onClick={()=>onClick(movie.id, movie.original_title)} className="movie" key={movie.id}>
+                <div onClick={()=>onClick(movie.id, movie.original_title, movie.poster_path)} className="movie" key={movie.id}>
                     <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
                     <h4>
                         {/* href에 as속성을 넣어준다. */}
@@ -30,7 +30,7 @@ export default function Home({results}) {
                 .container {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
-                    padding: 20px;d
+                    padding: 18px;
                     gap: 10px;
                 }
                 .movie {
@@ -70,4 +70,4 @@ export async function getServerSideProps() {
         results,
         },
     };
-    }
+}

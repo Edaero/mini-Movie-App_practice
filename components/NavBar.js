@@ -7,7 +7,7 @@ export default function NavBar() {
     return (
         <nav>
             {/* public 폴더에 있는 vercel.svg파일을 가져옴 */}
-            <img src="/vercel.svg" />
+            <img src="/DengMovie.PNG" />
             <div>
                 {/* Link태그는 href를 위해 사용하고, 나머지 속성들은 a태그에 넣어준다. */}
                 <Link href="/">
@@ -31,11 +31,12 @@ export default function NavBar() {
                     align-items: center;
                     padding-top: 20px;
                     padding-bottom: 10px;
-                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-                        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -30px,
+                        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                    border-radius: 20px
                 }
                 img {
-                    max-width: 100px;
+                    width: 200px;
                     margin-bottom: 5px;
                 }
                 nav a {
