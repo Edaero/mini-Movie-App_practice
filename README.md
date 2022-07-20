@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# mini-Movie-App_clone
+- [노마드 코더 NextJS로 mini-Movie-App 클론 코딩](https://nomadcoders.co/nextjs-fundamentals/lobby)
+- 20220720 완료
+- 사용언어: HTML, CSS, JavaScript, React, nodeJS, NextJS
+## 구현 기능 pages 폴더
+> ### _app.js
+- Layout에 페이지 파일들을 component와 pageProps로 받아와 렌더링
+> ### index.js
+- getServerSideProps를 사용해 서버 사이드 렌더링 구현
+- 서버에서 영화 API를 활용해 영화들의 이미지, 제목 정보 구현
+- router.push를 이용해 영화 이미지 클릭 시, 해당 영화 디테일 페이지로 이동할 수 있도록 함
+> ### movies > [...params].js
+- 파일 이름 앞에 ...을 붙여 URL뒤에 오는 변수를 Catch할 수 있게하였다.
+- useState, useEffect를 사용해 영화 고유 id에 해당하는 API를 받아와 영화 이미지, 제목, 개봉일, 개요 정보 구현
+- 
+> ### about.js
+> ### 404.js
+## 구현 기능 components 폴더
+> ### Layout.js
+- 
+> ### NavBar.js
+- 
+> ### Seo.js
+## 구현 기능 MINI-MOVIE-APP 폴더
+> ### next.config.js
+- 
+## 결과물 이미지
+![image](https://user-images.githubusercontent.com/99079176/179985553-9e882c6c-39e7-43f3-9208-6ca319c10ea5.png)
+![image](https://user-images.githubusercontent.com/99079176/179985610-0d753853-cfda-4cae-b350-1012c03be823.png)
