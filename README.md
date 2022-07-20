@@ -30,4 +30,5 @@
 - rewrites를 사용해 API-KEY를 숨기고, 유저가 이용하는 URL변경
 ## 결과물 이미지
 ![image](https://user-images.githubusercontent.com/99079176/179985553-9e882c6c-39e7-43f3-9208-6ca319c10ea5.png)
+---
 ![image](https://user-images.githubusercontent.com/99079176/179985610-0d753853-cfda-4cae-b350-1012c03be823.png)
