@@ -14,7 +14,6 @@ export default function Detail({params}) {
             `http://localhost:3000/api/movies/${params[1]}`
         )).json();
         setDetail(json);
-        console.log(detail.poster_path);
     }
     useEffect(() => {
         getMovie();
