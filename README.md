@@ -1,4 +1,4 @@
-# mini-Movie-App_clone
+# mini-movie-app_clone
 - [노마드 코더 NextJS로 mini-Movie-App 클론 코딩](https://nomadcoders.co/nextjs-fundamentals/lobby)
 - 20220720 완료
 - 사용언어: HTML, CSS, JavaScript, React, nodeJS, NextJS
